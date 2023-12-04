@@ -2,14 +2,14 @@
 
 class Movie 
 {
-    private int $id;
-    private string $title;
-    private string $overview;
-    private float $vote_average;
-    private string $poster_path;
+    private $id;
+    private $title;
+    private $overview;
+    private $vote_average;
+    private $poster_path;
 
 
-    function __construct(int $id, string $title, string $overview, float $vote_average, string $poster_path)
+    function __construct($id, $title, $overview, $vote_average, $poster_path)
     {
         $this->id = $id;
         $this->title = $title;
@@ -23,9 +23,9 @@ class Movie
         $id = $this->id;
         $title = $this->title;
         $overview = substr($this->overview, 0, 100) . "...";
-        $vote_average = $this->vote_average;
-        $poster_path = $this->poster_path;
-        include __DIR__ . '/../Views/card.php';
+        $vote = $this->vote_average;
+        $poster = $this->poster_path;
+        include __DIR__ . '/../View/card.php';
     }
     
 }

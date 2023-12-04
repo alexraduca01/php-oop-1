@@ -1,3 +1,10 @@
+<?php 
+
+include __DIR__ . '/Model/Movie.php';
+include __DIR__ . '/View/card.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -13,8 +20,12 @@
         <header class="container">
             <h1 class="text-center">PHP OOP</h1>
         </header>
-        <main>
-            
+        <main class="container py-5">
+            <div class="row gy-5">
+                <?php foreach($movies as $movie){
+                    $movie->printMovies();
+                } ?>
+            </div>
         </main>
         <footer>
 
