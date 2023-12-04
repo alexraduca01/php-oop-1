@@ -1,7 +1,6 @@
 <?php 
 
 include __DIR__ . '/Model/Movie.php';
-include __DIR__ . '/View/card.php';
 
 ?>
 

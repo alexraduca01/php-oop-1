@@ -23,9 +23,20 @@ class Movie
         $id = $this->id;
         $title = $this->title;
         $overview = substr($this->overview, 0, 100) . "...";
-        $vote = $this->vote_average;
+        $vote = $this->printStars();
         $poster = $this->poster_path;
         include __DIR__ . '/../View/card.php';
+    }
+
+    function printStars()
+    {
+        $vote = ceil($this->vote_average / 2);
+        $template = "<p class='m-0'>";
+        for($n = 1; $n <= 5; $n++){
+            $template .= $n <= $vote ? '<i class="fa-solid text-warning fa-star"></i>' : '<i class="fa-regular text-warning fa-star"></i>';
+        }
+        $template .= "</p>";
+        return $template;
     }
     
 }
