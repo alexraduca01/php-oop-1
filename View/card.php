@@ -11,6 +11,9 @@
             <div class="d-flex justify-content-between align-items-flex-start">
                 <?= $vote ?>
             </div>
+            <div>
+                <?= $genre ?>
+            </div>
         </div>
     </div>
     
